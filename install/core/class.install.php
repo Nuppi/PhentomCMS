@@ -100,7 +100,7 @@ class Install extends Database{
 				define("DBPORT", "3306");';
 	
 		//Scans Webpath to get all web applications
-		$apps = array_diff(scandir(WEB_PATH), array(".","..","index.php",".README.md.swp",".git","core"));
+		$apps = array_diff(scandir(WEB_PATH), array(".","..","index.php","README",".git","core","LICENSE"));
 	
 		//!TODO This is probably stupid... (Make only 1 config file at the main core location instead)
 		//Opens the config file of every web application and appends the data
@@ -235,15 +235,15 @@ class Install extends Database{
 		 * the page and specifies the error.
 		 * 
 		 ***********************************************/
-		$this->error['chat'] = $this->SimpleUpdateQuery($create_table_chat);
-		$this->error['info'] = $this->SimpleUpdateQuery($create_table_info);
-		$this->error['menu'] = $this->SimpleUpdateQuery($create_table_menu);
-		$this->error['news'] = $this->SimpleUpdateQuery($create_table_news);
-		$this->error['vote_cooldown'] = $this->SimpleUpdateQuery($create_table_voted_cooldown);
-		$this->error['vote_links'] = $this->SimpleUpdateQuery($create_table_vote_links);
-		$this->error['statistics'] = $this->SimpleUpdateQuery($create_table_statistics);
-		$this->error['data_in_menu'] = $this->SimpleUpdateQuery($insert_data_menu);
-		$this->error['data_in_info'] = $this->SimpleUpdateQuery($insert_data_info);
+		/*$this->error['chat'] =*/ $this->SimpleUpdateQuery($create_table_chat);
+		/*$this->error['info'] =*/ $this->SimpleUpdateQuery($create_table_info);
+		/*$this->error['menu'] =*/ $this->SimpleUpdateQuery($create_table_menu);
+		/*$this->error['news'] =*/ $this->SimpleUpdateQuery($create_table_news);
+		/*$this->error['vote_cooldown'] =*/ $this->SimpleUpdateQuery($create_table_voted_cooldown);
+		/*$this->error['vote_links'] =*/ $this->SimpleUpdateQuery($create_table_vote_links);
+		/*$this->error['statistics'] =*/ $this->SimpleUpdateQuery($create_table_statistics);
+		/*$this->error['data_in_menu'] =*/ $this->SimpleUpdateQuery($insert_data_menu);
+		/*$this->error['data_in_info'] =*/ $this->SimpleUpdateQuery($insert_data_info);
 		
 		
 		//!TODO Make the rest of the forum database and tables (already in a sql file)
