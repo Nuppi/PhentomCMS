@@ -67,7 +67,8 @@ class Database{
 			die();
 		}
 		
-		$stmt->close();
+		//Commented soo multiple querys can be executed
+		//$stmt->close();
 	}
 
 	//Returns the values (in a array) from a query generated with the fields that are inputed
